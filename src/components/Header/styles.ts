@@ -2,42 +2,30 @@ import styled from "styled-components";
 
 export const Container = styled.header`
   display: flex;
-  align-items: center;
-  margin: 0 auto;
-  background: gray;
+  width: 100%;
+  background-color: white;
 `;
 
 export const Menu = styled.nav`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-
-  max-width: 1120px;
   width: 100%;
-  margin: 1rem auto;
+  border-bottom: 1px solid rgba(219, 219, 219, 1);
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+`;
 
-  justify-content: space-between;
+export const Link = styled.ul`
+  list-style-type: none;
+  display: flex;
 
-  ul {
-    display: flex;
+  li {
+    text-decoration: none;
+    padding: 20px;
 
-    li {
-      list-style: none;
-      a {
-        text-decoration: none;
-      }
-      & + li {
-        margin-left: 1rem;
-      }
-    }
-  }
-
-  div {
     a {
+      cursor: pointer;
       text-decoration: none;
-      & + a {
-        margin-left: 1rem;
-      }
+      color: black;
     }
   }
 `;

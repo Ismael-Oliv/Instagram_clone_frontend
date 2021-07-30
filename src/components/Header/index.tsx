@@ -1,21 +1,23 @@
-import { Container, Menu } from "./styles";
+import { Container, Link, Menu } from "./styles";
 
 export function Header() {
   return (
     <Container>
       <Menu>
-        <ul>
+        <Link>
           <li>
-            <a href="http://localhot/">Home</a>
+            <a href="http://localhost:3000/">Pagina Inicial</a>
           </li>
           <li>
-            <a href="http://localhot/post">Posts</a>
+            <a href="http://localhost:3000/">Perfil</a>
           </li>
-        </ul>
-        <div>
-          <a href="http://">Entrar</a>
-          <a href="http://">Cadastar</a>
-        </div>
+          <li>
+            <a href="http://localhost:3000/">Artigos</a>
+          </li>
+          <li>
+            <a href="http://localhost:3000/">Contate-me</a>
+          </li>
+        </Link>
       </Menu>
     </Container>
   );
