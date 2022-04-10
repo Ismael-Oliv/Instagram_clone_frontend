@@ -1,7 +1,10 @@
+//Import Components
 import { Header } from "../../components/Header";
 import { History } from "../../components/History";
-import { Post } from "../../components/Post";
 import { Profile } from "../../components/Profile";
+import { Feed } from "../../components/Feed";
+
+//Import Style
 import { Container, Main, Content, ProfileInfo } from "./styles";
 
 export function Dashboard() {
@@ -11,7 +14,7 @@ export function Dashboard() {
       <Main>
         <Content>
           <History />
-          <Post />
+          <Feed />
         </Content>
 
         <ProfileInfo>

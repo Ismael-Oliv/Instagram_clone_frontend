@@ -3,14 +3,15 @@ import { FaRegComment } from "react-icons/fa";
 import { AiOutlineHeart } from "react-icons/ai";
 import { HiDotsHorizontal, HiOutlinePaperAirplane } from "react-icons/hi";
 import { GrEmoji } from "react-icons/gr";
-import {
-  Container,
-  Header,
-  Picture,
-  Footer,
-  AddComments,
-  Like,
-} from "./styles";
+
+//Import Icons
+import HeartBoldIcon from "../../assets/like-heart-bold.svg";
+import MessageIcon from "../../assets/add-message.svg";
+import ShareBoldIcon from "../../assets/share-message.svg";
+import MarkBoldIcon from "../../assets/mark-bold.svg";
+
+//Import Style
+import { Container, Header, Picture, Footer, AddComments, Like } from "./styles";
 
 export function Post() {
   return (
@@ -29,11 +30,11 @@ export function Post() {
       <Footer>
         <Like>
           <article>
-            <AiOutlineHeart />
-            <FaRegComment />
-            <HiOutlinePaperAirplane />
+            <img src={HeartBoldIcon} alt="like" />
+            <img src={MessageIcon} alt="Add comment" />
+            <img src={ShareBoldIcon} alt="Share post" />
           </article>
-          <IoBookmarkOutline />
+          <img src={MarkBoldIcon} alt="Mark post" />
         </Like>
 
         <AddComments>

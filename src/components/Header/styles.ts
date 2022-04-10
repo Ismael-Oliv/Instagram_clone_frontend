@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.header`
   display: flex;
@@ -25,19 +25,37 @@ export const LogoContainer = styled.div`
   display: flex;
   align-items: center;
 
+  box-flex: 1;
+  flex: 1 0 127px;
+
   a {
     margin-top: 10px;
   }
 `;
 
-export const MenuContainer = styled.section``;
+export const IconsContainer = styled.article`
+  display: flex;
+  box-flex: 1;
+  flex: 1 0 127px;
 
-export const MenuContent = styled.article`
+  align-items: center;
+  justify-content: end;
   a {
+    margin: 0 10px;
     img:last-child {
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
+      width: 25px;
+      height: 25px;
     }
+  }
+`;
+
+export const IconsContent = styled.div``;
+
+export const ProfilePicture = styled.a`
+  img {
+    width: 25px;
+    height: 25px;
+
+    border-radius: 50%;
   }
 `;
