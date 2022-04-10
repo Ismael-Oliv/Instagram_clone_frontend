@@ -2,6 +2,9 @@ import styled from "styled-components";
 
 export const Container = styled.section`
   border: 1px solid rgba(219, 219, 219, 1);
+  border-radius: 2px;
+  background-color: #ffffff;
+
   max-width: 614px;
 `;
 

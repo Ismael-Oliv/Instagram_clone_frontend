@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
@@ -7,6 +7,7 @@ export const Container = styled.div`
   height: 118px;
 
   border: 1px solid #dbdbdb;
+  background-color: #ffffff;
   border-radius: 3px;
   margin-bottom: 24px;
 `;

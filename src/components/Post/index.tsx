@@ -1,7 +1,6 @@
+//Import Icons
 import { HiDotsHorizontal } from "react-icons/hi";
 import { GrEmoji } from "react-icons/gr";
-
-//Import Icons
 import HeartBoldIcon from "../../assets/like-heart-bold.svg";
 import MessageIcon from "../../assets/add-message.svg";
 import ShareBoldIcon from "../../assets/share-message.svg";
