@@ -16,7 +16,7 @@ export const Menu = styled.nav`
   width: 100%;
   margin: 0 auto;
   padding: 0 20px;
-  height: 53px;
+  height: 60px;
   align-items: center;
   justify-content: space-between;
 `;
@@ -24,6 +24,8 @@ export const Menu = styled.nav`
 export const LogoContainer = styled.div`
   display: flex;
   align-items: center;
+
+  height: 36px;
 
   box-flex: 1;
   flex: 1 0 127px;
@@ -41,20 +43,24 @@ export const IconsContainer = styled.article`
   align-items: center;
   justify-content: end;
   a {
-    margin: 0 10px;
-    img:last-child {
-      width: 25px;
-      height: 25px;
+    & + a {
+      margin-left: 22px;
+    }
+    img {
+      width: 23.5px;
+      height: 23.5px;
     }
   }
 `;
 
-export const IconsContent = styled.div``;
+export const IconsContent = styled.div`
+  height: 23.5px;
+`;
 
 export const ProfilePicture = styled.a`
   img {
-    width: 25px;
-    height: 25px;
+    width: 23.5px;
+    height: 23.5px;
 
     border-radius: 50%;
   }

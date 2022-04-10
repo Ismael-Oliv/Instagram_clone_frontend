@@ -1,7 +1,4 @@
-import { IoBookmarkOutline } from "react-icons/io5";
-import { FaRegComment } from "react-icons/fa";
-import { AiOutlineHeart } from "react-icons/ai";
-import { HiDotsHorizontal, HiOutlinePaperAirplane } from "react-icons/hi";
+import { HiDotsHorizontal } from "react-icons/hi";
 import { GrEmoji } from "react-icons/gr";
 
 //Import Icons

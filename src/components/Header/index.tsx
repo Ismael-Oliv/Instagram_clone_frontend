@@ -3,10 +3,10 @@ import { FiSearch } from "react-icons/fi";
 
 //Import images
 import LogoIMG from "../../assets/logo.png";
-import HouseIcon from "../../assets/house.svg";
+import HouseIcon from "../../assets/home-bolder.svg";
 import MessageIcon from "../../assets/message.svg";
-import MommentsIcon from "../../assets/momments.svg";
-import Notifications from "../../assets/heart.svg";
+import MommentsIcon from "../../assets/momments-bold.svg";
+import Notifications from "../../assets/heart-bolder.svg";
 import ProfileImage from "../../assets/profile_image.jpg";
 import AddPost from "../../assets/add.svg";
 

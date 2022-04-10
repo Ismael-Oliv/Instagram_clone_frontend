@@ -1,5 +1,5 @@
-import { useRef, useState, useEffect, MouseEvent } from 'react';
-import { BiChevronRightCircle, BiChevronLeftCircle } from 'react-icons/bi';
+import { useRef, useState, useEffect, MouseEvent } from "react";
+import { BiChevronRightCircle, BiChevronLeftCircle } from "react-icons/bi";
 import {
   Container,
   Content,
@@ -7,7 +7,7 @@ import {
   ListItem,
   NextButton,
   PrevButton,
-} from './styles';
+} from "./styles";
 
 const ImagesList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 
@@ -75,16 +75,14 @@ export function History() {
           ))}
         </ListItemContainer>
 
-        {currentScroll > 0 ? (
+        {currentScroll > 0 && (
           <PrevButton onClick={(e) => handleLeftClick(e)}>
             <BiChevronLeftCircle />
           </PrevButton>
-        ) : (
-          ''
         )}
 
         {visible ? (
-          ''
+          ""
         ) : (
           <NextButton onClick={(e) => handleRightClick(e)}>
             <BiChevronRightCircle />

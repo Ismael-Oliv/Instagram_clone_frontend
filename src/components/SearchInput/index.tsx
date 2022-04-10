@@ -26,7 +26,7 @@ export function SearchInput({ name, icon: Icon, ...rest }: InputProps) {
 
   return (
     <Container>
-      {inputFocus && <Icon size={15} />}
+      {inputFocus && <Icon size={20} color="#8e8e8e" />}
 
       <InputElement
         {...rest}

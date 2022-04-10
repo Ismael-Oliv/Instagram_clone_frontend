@@ -4,20 +4,20 @@ export const Container = styled.section`
   display: flex;
   align-items: center;
 
-  width: 220px;
-  height: 30px;
-  padding: 5px 10px;
+  width: 268px;
+  height: 36px;
+  padding: 5px 15px;
 
   border-radius: 8px;
 
-  background-color: #e8e8e8;
+  background-color: #efefef;
 `;
 
 export const InputElement = styled.input`
   border: none;
 
   width: 100%;
-  margin-left: 5px;
+  margin-left: 16px;
 
-  background-color: #e8e8e8;
+  background-color: #efefef;
 `;
