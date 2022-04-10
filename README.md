@@ -6,7 +6,7 @@ This application was motivated by a will to recreate one of biggest web applicat
 
 ### Demo
 
-![](/media/ismael/4E1BBB114A2B63D7/HD Files/Projetos/Instagram_clone_frontend/assets/instagram-demo.gif)
+![](./assets/instagram-demo.gif)
 
 
 
