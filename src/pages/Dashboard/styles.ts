@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.div`
   position: relative;
@@ -9,7 +9,7 @@ export const Main = styled.main`
   max-width: 935px;
   width: 100%;
 
-  margin: 80px auto;
+  margin: 85px auto;
   justify-content: space-between;
 `;
 

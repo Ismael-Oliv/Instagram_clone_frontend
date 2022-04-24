@@ -57,9 +57,7 @@ export const NextButton = styled.div`
   top: 30%;
   cursor: pointer;
   svg {
-    font-size: 30px;
-    fill-opacity: 0.7;
-    background-position: -244px -107px;
+    font-size: 25px;
     border-radius: 50%;
   }
 `;
@@ -72,7 +70,7 @@ export const PrevButton = styled.div`
 
   z-index: 10;
   svg {
-    font-size: 30px;
     border-radius: 50%;
+    font-size: 25px;
   }
 `;

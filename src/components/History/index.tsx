@@ -1,5 +1,8 @@
 import { useRef, useState, useEffect, MouseEvent, useCallback } from "react";
 import { BiChevronRightCircle, BiChevronLeftCircle } from "react-icons/bi";
+
+import { IoIosArrowDroprightCircle, IoIosArrowDropleftCircle } from "react-icons/io";
+
 import {
   Container,
   Content,
@@ -38,7 +41,8 @@ export function History() {
   useEffect(() => {
     if (carousel.current) {
       const ScrollLeft = carousel.current.getBoundingClientRect().left;
-      const ScrollWidth = carousel.current.clientWidth;
+      const ScrollRight = carousel.current.getBoundingClientRect().right;
+      const nextScroll = currentScroll + ScrollLeft + 200;
 
       if (currentScroll > 0) {
         setIsStart(true);
@@ -46,7 +50,7 @@ export function History() {
         setIsStart(false);
       }
 
-      if (ScrollLeft + currentScroll >= ScrollWidth) {
+      if (nextScroll >= ScrollRight) {
         setIsEnd(false);
       } else {
         setIsEnd(true);
@@ -72,12 +76,12 @@ export function History() {
         </ListItemContainer>
         {isStart && (
           <PrevButton onClick={(e) => handleLeftClick(e)}>
-            <BiChevronLeftCircle />
+            <IoIosArrowDropleftCircle color="white" />
           </PrevButton>
         )}
         {isEnd && (
           <NextButton onClick={(e) => handleRightClick(e)}>
-            <BiChevronRightCircle />
+            <IoIosArrowDroprightCircle color="white" />
           </NextButton>
         )}
       </Content>
