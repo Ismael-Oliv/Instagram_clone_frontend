@@ -40,8 +40,8 @@ export const ListItem = styled.div`
 
     text-decoration: none;
     img {
-      width: 66px;
-      height: 66px;
+      width: 56px;
+      height: 56px;
       border-radius: 50%;
       border-color: red;
     }

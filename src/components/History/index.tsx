@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect, MouseEvent } from "react";
+import { useRef, useState, useEffect, MouseEvent, useCallback } from "react";
 import { BiChevronRightCircle, BiChevronLeftCircle } from "react-icons/bi";
 import {
   Container,
@@ -14,47 +14,43 @@ const ImagesList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 export function History() {
   const carousel = useRef<HTMLDivElement>(null);
   const [currentScroll, setCurrentScroll] = useState(0);
-  const [visible, isVisible] = useState(false);
+  const [isStart, setIsStart] = useState(false);
+  const [isEnd, setIsEnd] = useState(true);
 
-  const handleLeftClick = (e: MouseEvent<HTMLElement>) => {
+  const handleLeftClick = useCallback((e: MouseEvent<HTMLElement>) => {
     if (carousel.current) {
       e.preventDefault();
 
-      setCurrentScroll(
-        (carousel.current.scrollLeft -=
-          carousel.current.offsetWidth - carousel.current.offsetWidth * 0.3)
-      );
+      setCurrentScroll((prev) => prev - 200);
+      carousel.current.scrollLeft -= 200;
     }
-  };
+  }, []);
 
-  const handleRightClick = (e: MouseEvent<HTMLElement>) => {
+  const handleRightClick = useCallback((e: MouseEvent<HTMLElement>) => {
     if (carousel.current) {
       e.preventDefault();
 
-      setCurrentScroll(
-        (carousel.current.scrollLeft +=
-          carousel.current.offsetWidth - carousel.current.offsetWidth * 0.3)
-      );
+      carousel.current.scrollLeft += 200;
+      setCurrentScroll((prev) => prev + 200);
     }
-  };
+  }, []);
 
   useEffect(() => {
     if (carousel.current) {
-      let div = carousel.current.childNodes.length - 1;
+      const ScrollLeft = carousel.current.getBoundingClientRect().left;
+      const ScrollWidth = carousel.current.clientWidth;
 
-      let ElementOffsetLeft =
-        carousel.current.children[div]?.getBoundingClientRect().left;
+      if (currentScroll > 0) {
+        setIsStart(true);
+      } else {
+        setIsStart(false);
+      }
 
-      let elementClie = carousel.current.children[div]?.clientWidth;
-      let containerOffsetLeft = carousel.current.offsetLeft;
-
-      let cBottom = currentScroll + carousel.current.clientWidth;
-
-      let eTop = ElementOffsetLeft - containerOffsetLeft;
-      let eBottom = eTop + elementClie;
-
-      let isTotal = eTop >= currentScroll && eBottom <= cBottom;
-      isVisible(isTotal);
+      if (ScrollLeft + currentScroll >= ScrollWidth) {
+        setIsEnd(false);
+      } else {
+        setIsEnd(true);
+      }
     }
   }, [currentScroll]);
 
@@ -74,16 +70,12 @@ export function History() {
             </ListItem>
           ))}
         </ListItemContainer>
-
-        {currentScroll > 0 && (
+        {isStart && (
           <PrevButton onClick={(e) => handleLeftClick(e)}>
             <BiChevronLeftCircle />
           </PrevButton>
         )}
-
-        {visible ? (
-          ""
-        ) : (
+        {isEnd && (
           <NextButton onClick={(e) => handleRightClick(e)}>
             <BiChevronRightCircle />
           </NextButton>
